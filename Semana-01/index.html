@@ -180,16 +180,17 @@
             <form>
                 <input type="text" placeholder="Name">
                 <input type="email" placeholder="Email">
-                <input type="checkbox">
-                <p>Send me a copy</p>
-                <select name="select">
-                    <option value="value1" selected>Human resources</option>
+                <input name="checkbox-1" type="checkbox">
+                <label for="checkbox-1">Send me a copy</label>
+                <select name="category">
+                    <option value="disabled" disabled selected>Category</option>
+                    <option value="value1">Human resources</option>
                     <option value="value2">IT</option>
                     <option value="value3">Commercialization</option>
                 </select>
                 <textarea cols="30" rows="5" placeholder="Enter your message"></textarea>
-                <input type="checkbox">
-                <p>I'm a human</p>
+                <input name="checkbox-2" type="checkbox">
+                <label for="checkbox-2">I'm a human</label>
                 <input type="submit" value="Send message">
             </form>
         </div>
