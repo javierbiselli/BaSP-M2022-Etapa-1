@@ -51,7 +51,7 @@ aside {
     width: 20%;
     height: 100%;
     background-color: lightblue;
-    display:;
+    display: ;
 }
 
 aside ul li {
@@ -111,6 +111,7 @@ h1 {
 
 .main-section h2 {
     font-size: 24px;
+    text-transform: uppercase;
     padding-top: 64px;
     padding-bottom: 22px;
 }
@@ -121,7 +122,7 @@ h1 {
     padding-bottom: 40px;
 }
 .main-section button {
-    font-size: 14px;
+    font-size: 15px;
     font-weight: bold;
     color: #373867;
     text-transform: uppercase;
@@ -130,4 +131,115 @@ h1 {
     border: 2px solid #373867;
     border-radius: 5px;
     cursor: pointer;
+}
+
+.history-section {
+    width: 79%;
+    float: right;
+    margin-top: 56px;
+}
+
+.history-section h2 {
+    font-size: 60px;
+    font-weight: bold;
+    padding-bottom: 25px;
+}
+
+.history-img-1 {
+   float: left;
+   padding-right: 10px;
+}
+
+.history-img-2 {
+    float: right;
+    padding-left: 10px;
+    padding-right: 1%;
+}
+.history-img-1, .history-img-2 {
+    width: 400px;
+}
+.history-p {
+    font-size: 15px;
+    line-height: 27px;
+}
+
+.functionalities-section {
+    display: relative;
+    width: 79%;
+    float: right;
+    margin-top: 56px;
+}
+
+.functionalities-section h2 {
+    font-size: 60px;
+    font-weight: bold;
+    padding-bottom: 25px;
+}
+
+.functionalities-part {
+    display: inline-block;
+    width: 46%;
+}
+
+.functionalities-part h3 {
+    float: right;
+    width: 49%;
+    font-size: 20px;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.functionalities-part img {
+    float: left;
+    width: 40%;
+    padding-left: 3%;
+    padding-bottom: 85px;
+}
+
+.functionalities-part p {
+    position: relative;
+    width: 49%;
+    float: right;
+    line-height: 27px;
+}
+
+
+.reasons-section {
+    display: relative;
+    width: 79%;
+    float: right;
+    margin-top: 56px;
+}
+
+.reasons-section h2 {
+    font-size: 60px;
+    font-weight: bold;
+    padding-bottom: 25px;
+}
+
+.reasons-part {
+    display: inline-block;
+    width: 46%;
+}
+
+.reasons-part h3 {
+    float: right;
+    width: 49%;
+    font-size: 20px;
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.reasons-part img {
+    float: left;
+    width: 40%;
+    padding-left: 3%;
+    padding-bottom: 85px;
+}
+
+.reasons-part p {
+    position: relative;
+    width: 49%;
+    float: right;
+    line-height: 27px;
 }
