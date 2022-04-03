@@ -8,7 +8,7 @@ Author: Javier Biselli
 
 # Week 03 - CSS
 
-This css file adds style to the TRACKGENIX landing page 
+This style.css file adds style to the TRACKGENIX landing page 
 
 ```
 Author: Javier Biselli
