@@ -207,8 +207,7 @@ h1 {
     width: 40%;
     min-width: 170px;
     max-width: 210px;
-    padding-left: 3%;
-    padding-bottom: 85px;
+    padding: 0 5% 85px 5%;
 }
 
 .functionalities-part p {
@@ -248,8 +247,7 @@ h1 {
     width: 40%;
     min-width: 170px;
     max-width: 210px;
-    padding-left: 3%;
-    padding-bottom: 85px;
+    padding: 0 5% 85px 5%;
 }
 
 .reasons-part p {
@@ -315,10 +313,6 @@ select {
     width: 75%;
 }
 
-option[value="disabled"] {
-    font-weight: 100;
-}
-
 textarea {
     width: 72%;
     height: 320px;
@@ -356,11 +350,12 @@ input[type="submit"] {
 .list-section li {
     font-size: 15px;
     margin-bottom: 12px;
+    text-align: start;
 }
 
 .list {
     display: inline-block;
-    width: 33%;
+    margin: 0 10%;
 }
 
 footer {
