@@ -89,14 +89,38 @@ img {
     }
     .main img {
         width: 50%;
-        margin-top: 56px
+        margin-top: 56px;
+        margin-bottom: 0;
     }
     .article-container {
+        width: 50%;
         margin-top: 56px;
         margin-right: 75px;
     }
+
+    .article-container h2 {
+        font-size: 54px;
+    }
+
+    .article-container h3 {
+        font-size: 24px;
+        margin: 52px 0 21px 0;
+    }
+
+    .article-container p {
+        font-size: 18px;
+    }
+
+    .main-section button {
+        font-size: 15px;
+        font-weight: bold;
+        color: #373867;
+        text-transform: uppercase;
+        background-color: #FFF;
+        padding: 18px 85px;
+        border: 2px solid #373867;
+        border-radius: 5px;
+        cursor: pointer;
+    }
 }
 
-aside {
-    display:;
-}
