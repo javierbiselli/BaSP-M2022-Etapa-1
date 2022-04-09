@@ -1,0 +1,58 @@
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.logo h2 {
+    font-size: 20px;
+    margin-right: 120px;
+}
+
+.menu-icon a i {
+    font-size: 40px;
+}
+
+nav {
+    display: flex;
+    height: 100px;
+    background-color: #ededed;
+    align-items: center;
+}
+
+.logo-image {
+    display: none;
+    width: 120px;
+    height: 120px;
+    margin-left: 25%;
+}
+
+.logo-bar {
+    width: 240px;
+    border: 1px solid #000;
+    margin: 7px auto;
+}
+
+.logo {
+    text-align: center;
+    flex-grow: 5;
+}
+
+.menu-icon {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.social-networks {
+    margin-right: 1%;
+}
+.social-networks a i {
+    font-size: 22px;
+    margin: 0 9px;
+}
+
+.dividing-bar {
+    display: none;
+    width: 77%;
+    margin: 0 21.7% 0;
+    border: 1px solid black;
+}

@@ -1,0 +1,44 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.main img {
+    width: 100%;
+    max-height:;
+    margin: 13px 0;
+    object-fit: cover;
+}
+
+.main h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, .20);
+}
+
+.main-section h3 {
+    font-size: 15px;
+    margin: 13px 0;
+    text-transform: uppercase;
+}
+
+.main-section p {
+    font-size: 13px;
+    line-height: 1.2;
+    margin-bottom: 36px;
+}
+
+.main-section button {
+    font-size: 15px;
+    font-weight: bold;
+    color: #373867;
+    text-transform: uppercase;
+    background-color: #AACE9B;
+    padding: 15px 30px;
+    border-radius: 5px;
+    border-style: none;
+    cursor: pointer;
+}
+
