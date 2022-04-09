@@ -8,7 +8,7 @@ aside {
 
 body {
     color: #373867;
-    font-family: 'Roboto', sans-serif;;
+    font-family: 'Roboto', sans-serif;
 }
 
 a {
@@ -25,6 +25,7 @@ a:visited {
 
 img {
     width: 100%;
+    object-fit: cover;
 }
 
 
@@ -40,11 +41,42 @@ img {
     aside {
         display: inherit; 
     }
-    .main-container{
-        width: 75%;
+    .main, .history-section, .functionalities-section, .reasons-section, .form-container, .list-section{
+        width: 70%;
         margin: 0 25%;
     }
 
+    .main h2 {
+        font-size: 30px;
+    }
+
+    .main h3 {
+        font-size: 24px;
+    }
+
+    .main p {
+        font-size: 18px;
+    }
+
+    .history-section h3 {
+        font-size: 30px;
+    }
+
+    .history-section p {
+        font-size: 18px;
+    }
+
+    .functionalities-section h2, .reasons-section h2 {
+        font-size: 40px;
+    }
+
+    .functionalities-section h3, .reasons-section h3 {
+        font-size: 24px;
+    }
+
+    .functionalities-section p, .reasons-section p {
+        font-size: 18px;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -78,8 +110,8 @@ img {
         width: 20%;
     }
 
-    .main-container{
-        width: 80%;
+    .main, .history-section, .functionalities-section, .reasons-section, .form-container, .list-section{
+        width: 76%;
         margin: 0 20%;
     }
 
@@ -87,6 +119,11 @@ img {
         flex-direction: row-reverse;
         text-align: start;
     }
+
+    .main h2 {
+        font-size: 54px;
+    }
+
     .main img {
         width: 50%;
         margin-top: 56px;
@@ -121,6 +158,51 @@ img {
         border: 2px solid #373867;
         border-radius: 5px;
         cursor: pointer;
+    }
+
+    .history-mobile-p, .history-button, .history-img-1-mobile, .history-img-2-mobile{
+        display: none;
+    }
+
+    .history-section h3 {
+        display: none;
+    }
+
+    .history-desktop-p {
+        display: inherit;
+    }
+
+    .history-section h2, .functionalities-section h2, .reasons-section h2 {
+        display: inherit;
+        font-size: 60px;
+        font-weight: bold;
+        margin: 50px 0; 
+    }
+
+    .history-section h2 {
+        margin-bottom: 20px;
+    }
+
+    .history-section p {
+        font-size: 15px;
+        line-height: 1.5rem;
+        color: #373867;
+    }
+    
+    .functionalities-section h3, .reasons-section h3 {
+        font-size: 30px;
+    }
+
+    .functionalities-section p, .reasons-section p {
+        font-size: 20px;
+    }
+
+    .functionalities-part, .reasons-part {
+        flex-basis: 50%;
+    }
+    
+    .functionalities-part img {
+        max-width: 300px;
     }
 }
 
