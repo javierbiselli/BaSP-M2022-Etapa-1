@@ -1,8 +1,4 @@
-aside {
-    display: none;
-}
-
-.social-networks {
+aside, .social-networks {
     display: none;
 }
 
@@ -15,11 +11,7 @@ a {
     text-decoration: none;
 }
 
-a:link{
-    color: #373867;
-}
-
-a:visited {
+a:link, a:visited {
     color: #373867;
 }
 
@@ -28,22 +20,36 @@ img {
     object-fit: cover;
 }
 
+ol {
+    list-style: auto;
+}
+
+.whole-container {
+    position: relative;
+    top: 100px;
+}
+
 
 @media screen and (min-width: 768px) {
     nav {
         height: 200px;
     }
     
-    .logo-image {
+    .logo-image, aside {
         display: inherit;
     }
 
-    aside {
-        display: inherit; 
-    }
-    .main, .history-section, .functionalities-section, .reasons-section, .form-container, .list-section{
+    .main, .history-section, .functionalities-section, .reasons-section, .form-container, .list-section, footer {
         width: 70%;
-        margin: 0 25%;
+        margin: 30px 25%;
+    }
+
+    .main {
+        margin: 0px 25%;
+    }
+
+    .whole-container {
+        top: 200px;
     }
 
     .main h2 {
@@ -77,6 +83,30 @@ img {
     .functionalities-section p, .reasons-section p {
         font-size: 18px;
     }
+
+    .form-container h3 {
+        font-size: 30px;
+    }
+
+    input, select, textarea {
+        font-size: 18px;
+    }
+
+    .submit-checkbox, .email-checkbox {
+        font-size: 16px;
+    }
+
+    input[type="submit"] {
+        font-size: 18px;
+    }
+
+    .list h4 {
+        font-size: 48px;
+    }
+
+    ol li {
+        font-size: 16px;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -86,23 +116,11 @@ img {
         justify-content: flex-end;
     }
 
-    .logo-image {
+    .logo-image, .logo, .menu-icon, .history-mobile-p, .history-button, .history-img-1-mobile, .history-img-2-mobile, .history-section h3{
         display: none;
     }
 
-    .logo {
-        display: none;
-    }
-
-    .menu-icon {
-        display: none;
-    }
-
-    .social-networks {
-        display: inherit;
-    }
-
-    .dividing-bar {
+    .social-networks, .dividing-bar, .history-desktop-p, .footer-dividing-bar {
         display: inherit;
     }
 
@@ -110,9 +128,13 @@ img {
         width: 20%;
     }
 
-    .main, .history-section, .functionalities-section, .reasons-section, .form-container, .list-section{
+    .main, .history-section, .functionalities-section, .reasons-section, .form-container, .list-section, footer{
         width: 76%;
         margin: 0 20%;
+    }
+
+    .whole-container {
+        top: 100px;
     }
 
     .main {
@@ -160,18 +182,6 @@ img {
         cursor: pointer;
     }
 
-    .history-mobile-p, .history-button, .history-img-1-mobile, .history-img-2-mobile{
-        display: none;
-    }
-
-    .history-section h3 {
-        display: none;
-    }
-
-    .history-desktop-p {
-        display: inherit;
-    }
-
     .history-section h2, .functionalities-section h2, .reasons-section h2 {
         display: inherit;
         font-size: 60px;
@@ -203,6 +213,47 @@ img {
     
     .functionalities-part img {
         max-width: 300px;
+    }
+
+    form {
+        width: 80%;
+        margin: auto;
+    }
+
+    .form-container h3 {
+        font-size: 60px;
+    }
+
+    input, select, textarea {
+        font-size: 22px;
+    }
+
+    .submit-checkbox, .email-checkbox {
+        font-size: 18px;
+    }
+
+    input[type="submit"] {
+        font-size: 22px;
+    }
+
+    .input-container {
+        flex-direction: row;
+    }
+
+    .input-container input {
+        width: 40%;
+    }
+
+    .list-section {
+        flex-direction: row;
+    }
+
+    ol {
+        margin-left: 20px;
+    }
+
+    .list-section h4 {
+        border: none;
     }
 }
 
