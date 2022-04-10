@@ -12,6 +12,12 @@ h1 {
     font-size: 40px;
 }
 
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
 nav {
     display: flex;
     height: 100px;
@@ -54,5 +60,6 @@ nav {
     display: none;
     width: 77%;
     margin: 0 21.7% 0;
-    border: 1px solid black;
+    border: 1px solid #000;
+    background-color: #000;
 }
