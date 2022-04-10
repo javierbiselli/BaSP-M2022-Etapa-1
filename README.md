@@ -2,13 +2,23 @@
 
 This html file is the landing page (desktop version) for TRACKGENIX SA
 
-```
-Author: Javier Biselli
-```
-
 # Week 03 - CSS
 
-This style.css file adds style to the TRACKGENIX landing page 
+This style.css file adds static style to the TRACKGENIX landing page 
+
+# Week 04 - Responsive Design
+
+These css files add style and responsiveness to the TRACKGENIX landing page using flexbox as the main design model and mobile first
+
+header.css is the top of the page. There are two different headers in Trackgenix landing page, one for mobile and tablet, and one for desktop resolutions. In the mobile version there are 2 elements, the tittle and the menu button. The tablet version adds the sidebar and the main logo, and the desktop version delete the logo image and logo, and replace them with the social network icons. These changes to the header are aplied with media queries, making certains elements appear or dissappear using display: none and display: inherit
+
+sidebar.css is the left bar of the page, it consists of a fixed box that changes width with different resolutions
+
+main.css contains the whole content of the page from the main section to the lists section, some elements here change from mobile and tablet to desktop, for example, the history section has buttons and less text in mobile and tablet than desktop, these changes are aplied with media queries using display: none and display: inherit
+
+footer.css is the bottom of the page
+
+whole-page.css contains the styles that apply to the whole page, and the two media queries, one for tablet (768px), and one for desktop (1024px)
 
 ```
 Author: Javier Biselli
