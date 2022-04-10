@@ -1,9 +1,10 @@
 aside {
     width: 25%;
     height: 100%;
-    position:fixed;
+    position: fixed;
     background-color: #AFAFC2;
     overflow: scroll;
+    z-index: 3;
 }
 
 aside::-webkit-scrollbar {
@@ -48,6 +49,7 @@ aside p {
 
 .aside-bar {
     width: 70%;
-    border: 1px solid black;
+    border: 1px solid #000;
+    background-color: #000;
     margin: 34px auto;
 }
