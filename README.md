@@ -20,6 +20,8 @@ footer.css is the bottom of the page
 
 whole-page.css contains the styles that apply to the whole page, and the two media queries, one for tablet (768px), and one for desktop (1024px)
 
+Link: https://javierbiselli.github.io/BaSP-M2022-Etapa-1/Semana-04/index.html
+
 ```
 Author: Javier Biselli
 ```
