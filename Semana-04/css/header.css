@@ -57,6 +57,7 @@ nav {
 }
 
 .dividing-bar {
+    position: fixed;
     display: none;
     width: 77%;
     margin: 0 21.7% 0;
