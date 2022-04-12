@@ -128,7 +128,7 @@ ol {
         width: 20%;
     }
 
-    .main, .history-section, .functionalities-section, .reasons-section, .form-container, .list-section, footer{
+    .main, .history-section, .functionalities-section, .reasons-section, .form-container, .list-section, .pagination-container, footer{
         width: 76%;
         margin: 0 20%;
     }
@@ -251,5 +251,9 @@ ol {
 
     .list-section h4 {
         border: none;
+    }
+
+    .pagination-container {
+        display: inherit;
     }
 }
