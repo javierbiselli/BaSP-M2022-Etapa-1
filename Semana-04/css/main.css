@@ -251,10 +251,8 @@ ol li {
 }
 
 .pagination {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
     margin: 60px 0;
+    text-align: center;
 }
 
 .pagination a {
@@ -262,7 +260,7 @@ ol li {
     padding: 12px 15px;
 }
 
-.pagination .preview {
+.pagination .preview, .pagination .next {
     padding: 10px 30px;
     border: 2px solid #373867;
     border-radius: 10px;
@@ -277,8 +275,5 @@ ol li {
 }
 
 .pagination .next {
-    padding: 10px 30px;
-    border: 2px solid #373867;
-    border-radius: 10px;
-    text-transform: uppercase;
+    opacity: 1;
 }
