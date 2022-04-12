@@ -210,10 +210,6 @@ ol {
     .functionalities-part, .reasons-part {
         flex-basis: 50%;
     }
-    
-    .functionalities-part img {
-        max-width: 300px;
-    }
 
     form {
         width: 80%;
@@ -246,6 +242,7 @@ ol {
 
     .list-section {
         flex-direction: row;
+        margin-top: 60px;
     }
 
     ol {
@@ -256,4 +253,3 @@ ol {
         border: none;
     }
 }
-

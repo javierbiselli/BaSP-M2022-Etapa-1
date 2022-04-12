@@ -224,11 +224,7 @@ input[type="submit"] {
 .list-section {
     text-align: start;
     align-items: center;
-    justify-content: center;
-}
-
-.list {
-    width: 33%;
+    justify-content: space-evenly;
 }
 
 .list h4 {
