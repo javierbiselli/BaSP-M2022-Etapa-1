@@ -1,5 +1,6 @@
 console.log(`05-For`);
 
+// Exercise A
 console.log(`Exercise A`);
 
 var names = [`javier`, `franco`, `lucas`, `matias`, `jesica`];
@@ -9,6 +10,7 @@ for (let i = 0; i < names.length; i++) {
     alert(names[i]);
 }
 
+// Exercise B
 console.log(`Exercise B`);
 
 var upperCase = [];
@@ -23,6 +25,7 @@ for (let i = 0; i < names.length; i++) {
 
 console.log(`New array with upper case: ${upperCase}`);
 
+// Exercise C
 console.log(`Exercise C`);
 
 var sentence = '';
@@ -36,12 +39,13 @@ for (let i = 0; i < names.length; i++) {
 
 console.log(`Complete sentence ${sentence}`);
 
-console.log(`Exercise D`)
+// Exercise D
+console.log(`Exercise D`);
 
-var emptyArray = []
+var emptyArray = [];
 
 for (let i = 0; i < 10; i++) {
-    emptyArray.push(i)
+    emptyArray.push(i);
 }
 
-console.log(`Array from 0 to 9 with for: ${emptyArray}`)
+console.log(`Array from 0 to 9 with for: ${emptyArray}`);

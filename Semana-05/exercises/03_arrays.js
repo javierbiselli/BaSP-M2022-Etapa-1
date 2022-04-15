@@ -1,49 +1,56 @@
-console.log(`03-Arrays`)
+console.log(`03-Arrays`);
 
+// Exercise A
 console.log(`Exercise A`);
 
-var months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+var months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 
-console.log(`Months 5 and 11: ${months[4]}, ${months[10]}`)
+console.log(`Months 5 and 11: ${months[4]}, ${months[10]}`);
 
-console.log(`Exercise B`)
+// Exercise B
+console.log(`Exercise B`);
 
-months.sort()
+months.sort();
 
-console.log(`Array ordered: ${months}`)
+console.log(`Array ordered: ${months}`);
 
-console.log(`Exercise C`)
+// Exercise C
+console.log(`Exercise C`);
 
-months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 
-months.unshift(`first`)
-months.push(`last`)
+months.unshift(`first`);
+months.push(`last`);
 
-console.log(`Unshift and push: ${months}`)
+console.log(`Unshift and push: ${months}`);
 
-console.log(`Exercise D`)
+// Exercise D
+console.log(`Exercise D`);
 
-months.shift()
-months.pop()
+months.shift();
+months.pop();
 
-console.log(`Shift and pop: ${months}`)
+console.log(`Shift and pop: ${months}`);
 
-console.log(`Exercise E`)
+// Exercise E
+console.log(`Exercise E`);
 
-months.reverse()
+months.reverse();
 
-console.log(`Reverse: ${months}`)
+console.log(`Reverse: ${months}`);
 
-console.log(`Exercise F`)
+// Exercise F
+console.log(`Exercise F`);
 
-months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"]
+months = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 
-newArrayToString = months.join('-')
+newArrayToString = months.join('-');
 
-console.log(`Join: ${newArrayToString}`)
+console.log(`Join: ${newArrayToString}`);
 
-console.log(`Exercise G`)
+// Exercise G
+console.log(`Exercise G`);
 
-monthsCopy = months.slice(4,11)
+monthsCopy = months.slice(4,11);
 
-console.log(`Slice from may to november ${monthsCopy}`)
+console.log(`Slice from may to november ${monthsCopy}`);

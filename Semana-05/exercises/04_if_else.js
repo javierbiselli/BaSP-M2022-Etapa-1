@@ -1,5 +1,6 @@
 console.log(`04-If-Else`);
 
+// Exercise A
 console.log(`Exercise A`);
 
 var randomNumber = Math.random();
@@ -12,6 +13,7 @@ else {
     alert(`Lower than 0.5`);
 }
 
+// Exercise B
 console.log(`Exercise B`);
 
 var age = Math.floor(Math.random() * 101);
