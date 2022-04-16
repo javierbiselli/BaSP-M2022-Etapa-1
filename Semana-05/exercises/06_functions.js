@@ -59,12 +59,33 @@ console.log(validateInteger(3.5));
 // Exercise D
 console.log(`Exercise D`);
 
-function sumaValidada(num1, num2) {
-    if (isNaN(num1) == true || isNaN(num2) == true) {
+function sumaValidada2(num1, num2) {
+    if (isNaN(num1) || isNaN(num2)) {
         alert(`Error: invalid parameters`);
         return NaN;
     }
-    else {
+    else if (num1 == Math.floor(num1) && num2 == Math.floor(num2)) {
         return num1 + num2;
     }
+    else {
+        alert(`Error: not integer`);
+        return [Math.round(num1), Math.round(num2)];
+    }
 }
+
+console.log(sumaValidada2(`sdgfdg`, 3));
+
+// Exercise E
+console.log(`Exercise E`);
+
+function validateIntergerSeparated(num1, num2) {
+    if (num1 != Math.floor(num1) || num2 != Math.floor(num2)) {
+        alert(`Error: not integer`);
+        return [Math.round(num1), Math.round(num2)];
+    }
+    else {
+        return sumaValidada2(num1, num2)
+    }
+}
+
+console.log(validateIntergerSeparated(`a`, 3))
