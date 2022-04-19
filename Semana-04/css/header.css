@@ -4,8 +4,8 @@ h1 {
 }
 
 .logo h2 {
-    font-size: 20px;
     margin-right: 120px;
+    font-size: 20px;
 }
 
 .menu-icon a i {
@@ -20,9 +20,9 @@ header {
 
 nav {
     display: flex;
+    align-items: center;
     height: 100px;
     background-color: #ededed;
-    align-items: center;
 }
 
 .logo-image {
@@ -34,8 +34,8 @@ nav {
 
 .logo-bar {
     width: 240px;
-    border: 1px solid #000;
     margin: 7px auto;
+    border: 1px solid #000;
 }
 
 .logo {
@@ -44,16 +44,18 @@ nav {
 }
 
 .menu-icon {
-    flex-grow: 1;
     text-align: center;
+    flex-grow: 1;
 }
 
 .social-networks {
+    display: none;
     margin-right: 1%;
 }
+
 .social-networks a i {
-    font-size: 22px;
     margin: 0 9px;
+    font-size: 22px;
 }
 
 .dividing-bar {
@@ -64,3 +66,29 @@ nav {
     border: 1px solid #000;
     background-color: #000;
 }
+
+@media screen and (min-width: 768px) {
+    nav {
+        height: 200px;
+    }
+    
+    .logo-image {
+        display: inherit;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    nav {
+        justify-content: flex-end;
+        height: 100px;
+        background-color: #fff;
+    }
+
+    .logo-image, .logo, .menu-icon {
+        display: none;
+    }
+
+    .social-networks {
+        display: inherit;
+    }
+}   
