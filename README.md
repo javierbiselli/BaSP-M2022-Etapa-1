@@ -22,6 +22,12 @@ These CSS files add style and responsiveness to the TRACKGENIX landing page usin
 
 ## **Click [here](https://javierbiselli.github.io/BaSP-M2022-Etapa-1/Semana-04/index.html) to go to the Trackgenix land page.**
 
+# Week 05 - Javascript
+
+This js files are the exercises corresponding to the fifth week of the BaSP 2022 course. The folder exercises contains every module of exercises, each using differents
+Javascript tools to resolve the problematics. The js files are linked to the index.html file using the script tag. Results are visible on the browser's console
+
+
 ```
 Author: Javier Biselli
 ```
