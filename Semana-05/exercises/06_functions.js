@@ -72,12 +72,16 @@ function sumaValidada2(num1, num2) {
         alert('Error: invalid parameters');
         return NaN;
     }
-    else if (num1 == Math.floor(num1) && num2 == Math.floor(num2)) {
-        return num1 + num2;
+    else if (validateInteger(num1) == false) {
+        alert('Error: first number is not integer');
+        return `Number converted to integer: ${Math.round(num1)}`;
+    }
+    else if (validateInteger(num2) == false) {
+        alert('Error: second number is not integer');
+        return `Number converted to integer: ${Math.round(num2)}`;
     }
     else {
-        alert('Error: not integer');
-        return [Math.round(num1), Math.round(num2)];
+        return num1 + num2;
     }
 }
 
@@ -90,10 +94,10 @@ console.log(sumaValidada2(3.5, 'javi'));
 // Invalid parameters
 console.log(sumaValidada2('@', '25'));
 
-// Not integer
+// First number not integer
 console.log(sumaValidada2(5.9, 77.2343));
 
-// Not integer
+// Second number not integer
 console.log(sumaValidada2(9, 11.8));
 
 // Valid
@@ -105,13 +109,49 @@ console.log(sumaValidada2(5, 23));
 console.log('Exercise E');
 
 function validateIntergerSeparated(num1, num2) {
-    if (num1 != Math.floor(num1) || num2 != Math.floor(num2)) {
-        alert('Error: not integer');
-        return [Math.round(num1), Math.round(num2)];
+    if (validateInteger(num1) == false || validateInteger(num2) == false) {
+        alert('Not integer');
+        return console.log(`Numbers converted to integer: ${Math.round(num1)}, ${Math.round(num2)}`);
     }
     else {
-        return sumaValidada2(num1, num2)
+        return num1 + num2;
     }
 }
 
-// console.log(validateIntergerSeparated('a', 3))
+function validateNumber (num1, num2) {
+    if (isNaN(num1) == true || isNaN(num2) == true) {
+        alert('Error: invalid parameters');
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+function suma2(num1, num2) {
+    if (validateNumber(num1, num2)) {
+        return NaN;
+    }
+    else {
+        validateIntergerSeparated(num1, num2)
+        return `Result: ${Math.round(num1) + Math.round(num2)}`;
+    }
+}
+
+// Invalid parameters
+console.log(suma2('j', 9));
+
+// Invalid parameters
+console.log(suma2(7.6, 's'));
+
+// Invalid parameters
+console.log(suma2('%', '260'));
+
+// Not integer
+console.log(suma2(99.6, 12.9929));
+
+// Not integer
+console.log(suma2(9, 19.3));
+
+// Valid
+console.log(suma2(9, 4));
