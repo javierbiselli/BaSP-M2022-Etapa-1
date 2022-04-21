@@ -29,6 +29,8 @@ Javascript tools to resolve the problematics. The js files are linked to the ind
 
 ## **Click [here](https://javierbiselli.github.io/BaSP-M2022-Etapa-1/Semana-05/index.html) to go to the index.**
 
+# Week 06 - DOM and Javascript
+
 ```
 Author: Javier Biselli
 ```

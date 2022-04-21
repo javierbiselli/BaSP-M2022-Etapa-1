@@ -1,0 +1,38 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+
+footer i {
+    margin: 0 6px 10px 6px;
+    font-size: 22px;
+}
+
+footer p {
+    margin-bottom: 30px;
+    font-size: 12px;
+}
+
+.footer-dividing-bar {
+        display: none;
+        width: 77%;
+        margin: 0 21.7% 50px;
+        border: 1px solid #000;
+        background-color: #000;
+}
+
+@media screen and (min-width: 768px) {
+    footer {
+        width: 70%;
+        margin: 30px 25%;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    footer{
+        width: 76%;
+        margin: 0 20%;
+    }
+}

@@ -1,0 +1,39 @@
+body {
+    color: #373867;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: #373867;
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+}
+
+ol {
+    list-style: auto;
+}
+
+.whole-container {
+    position: relative;
+    top: 100px;
+}
+
+
+@media screen and (min-width: 768px) {
+    .whole-container {
+        top: 200px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .whole-container {
+        top: 100px;
+    }
+}
