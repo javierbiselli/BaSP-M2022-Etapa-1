@@ -12,9 +12,9 @@
         <link rel="stylesheet" href="../styles/header.css">
         <link rel="stylesheet" href="../styles/sidebar.css">
         <link rel="stylesheet" href="../styles/footer.css">
-        <link rel="stylesheet" href="../styles/login.css">
         <link rel="stylesheet" href="../styles/main.css">
         <link rel="stylesheet" href="../styles/whole-page.css">
+        <link rel="stylesheet" href="../styles/login.css">
         <title>LogIn | Trackgenix SA</title>
     </head>
     <body>
@@ -24,10 +24,10 @@
             </div>
             <p>Menu</p>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sign-up.html" target="_blank">SignUp</a></li>
-                <li><a href="login.html" target="_blank">LogIn</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a class="ul-link1" href="index.html">Home</a></li>
+                <li><a class="ul-link2" href="sign-up.html">SignUp</a></li>
+                <li><a class="ul-link3" href="login.html">LogIn</a></li>
+                <li><a class="ul-link4" href="#">Contact</a></li>
             </ul>
             <div class="aside-bar"></div>
             <p>Get in touch</p>
@@ -67,27 +67,36 @@
             </nav>
             <div class="dividing-bar"></div>
         </header>
-        <div class="login-form-container">
-            <div class="login-form-box">
-                <h2>Log In</h2>
-                <form>
-                    <div class="login-inputs">
-                        <input type="email" placeholder="Email">
-                        <p class="login-error">
-                            Invalid email format
-                        </p>
-                        <input type="password" placeholder="Password">
-                        <p class="login-error">
-                            Invalid password format
-                        </p>
-                    </div>
-                    <div class="login-email-checkbox">
-                        <input name="checkbox-email" type="checkbox">
-                        <label for="checkbox-email">Remember me</label>
-                    </div>
-                    <a href="#">Forgot password?</a>
-                    <input type="submit" value="Continue">
-                </form>
+        <div class="login-container">
+            <div class="login-form-container">
+                <div class="login-form-box">
+                    <form novalidate>
+                        <h2>Log In</h2>
+                        <div class="login-inputs">
+                            <input type="email" placeholder="Email">
+                            <p class="login-error"></p>
+                            <input type="password" placeholder="Password">
+                            <p class="login-error"></p>
+                        </div>
+                        <div class="dummys-login-container">
+                            <div class="dummys-login">
+                                <div class="login-email-checkbox">
+                                    <input name="checkbox-email" type="checkbox">
+                                    <label for="checkbox-email">Remember me</label>
+                                </div>
+                                <a href="#">Forgot password?</a>
+                            </div>
+                        </div>
+                        <input type="submit" value="Continue">
+                    </form>
+                </div>
+            </div>
+            <div class="login-validation-container">
+                <div id="login-validation">
+                    <h3>Validation Result</h3>
+                    <p class="login-validation-result"></p>
+                    <p class="login-validation-result"></p>
+                </div>
             </div>
         </div>
         <script src="../javascript/login.js"></script>
