@@ -1,4 +1,4 @@
-h2 {
+form h2 {
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 40px;
@@ -95,6 +95,7 @@ form input[type="submit"] {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     background-color: #EBEBF0;
     width: 50%;
     max-width: 350px;

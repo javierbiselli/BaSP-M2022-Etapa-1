@@ -84,6 +84,7 @@ validationBox.style.display = 'none'
 function showResultsLogin() {
     event.preventDefault()
     validationBox.style.display = 'inherit'
+    validationBox.scrollIntoView(true)
     if (validateEmail()) {
         validationResults[0].textContent = 'Error: invalid email'
         validationResults[0].style.color = 'red'
@@ -102,4 +103,3 @@ function showResultsLogin() {
         validationResults[1].style.color = 'green'
     }
 }
-
