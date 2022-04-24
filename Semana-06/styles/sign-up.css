@@ -1,43 +1,121 @@
+form h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.signup-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 150px;
+}
+
 .signup-form-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    position: relative;
-    top: 100px;
-    height: calc(100vh - 110px);
 }
 
 .signup-form-box {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
-    width: 75%;
+    width: 50%;
+    max-width: 350px;
     min-width: 200px;
-    min-height: 350px;
+    height: 700px;
     background-color: #EBEBF0;
+    box-shadow: 0px 4px 15px 4px rgba(0, 0, 0, 0.25);
 }
 
-.signup-error {
-    display: none;
+.signup-form-box form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    height: 80%;
+}
+
+input {
+    width: 70%;
+    margin: 10px 0;
+}
+
+input[type="submit"] {
+    width: 80%;
+    margin: 10px auto;
+}
+
+.ul-link2 {
+    font-weight: bold;
+}
+
+.signup-validation-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+#signup-validation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: #EBEBF0;
+    width: 50%;
+    max-width: 350px;
+    min-width: 200px;
+    height: 200px;
+    box-shadow: 0px 4px 15px 4px rgba(0, 0, 0, 0.25);
+}
+
+#signup-validation h3 {
+    font-size: 20px;
+    padding: 20px 0;
+}
+
+.signup-validation-result {
+    margin: 10px 0;
+    font-size: 13px;
 }
 
 @media screen and (min-width: 768px) {
-    .signup-form-container {
-        top: 200px;
-        height: calc(100vh - 210px);
+    .signup-container {
+        top: 250px;
         margin-left: 25%;
+    }
+
+    .signup-form-box {
+        width: 90%;
+        max-width: 1200px;
+    }
+
+    .form-inputs {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-left: 15px;
+    }
+
+    .form-inputs input {
+        width: 40%;
+        margin: 10px;
+    }
+
+    #signup-validation {
+        width: 90%;
+        max-width: 1200px;
     }
 }
 
 @media screen and (min-width: 1024px) {
     .dividing-bar {
-        display: static;
+        display: inherit;
     }
-    .signup-form-container {
-        top: 100px;
-        height: calc(100vh - 110px);
+    .signup-container {
+        top: 150px;
         margin-left: 20%;
     }
 }
