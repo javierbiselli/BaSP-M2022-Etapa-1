@@ -193,12 +193,6 @@ function validateLocation() {
         locationInputSignup.style.border = '2px solid red';
         return true
     }
-    else if (!validation1(locationInputSignup)) {
-        signupErrors[6].style.display = 'inherit';
-        signupErrors[6].textContent = '* must contain letters and numbers';
-        locationInputSignup.style.border = '2px solid red';
-        return true
-    }
     else {
         locationInputSignup.style.border = '2px solid green';
     }
