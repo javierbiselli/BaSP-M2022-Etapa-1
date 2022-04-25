@@ -21,7 +21,6 @@ function validateEmail() {
     }
     else {
         emailInputLogin.style.border = '2px solid green'
-        return false
     }
 }
 
@@ -38,7 +37,7 @@ function validation() {
     var numbers = ['1','2','3','4','5','6','7','8','9','0']
     var num = 0
     var stri = 0
-    for (let i = 0; i < passwordInputLogin.value.length; i++) {
+    for (var i = 0; i < passwordInputLogin.value.length; i++) {
         if (numbers.includes(passwordInputLogin.value[i])) {
             num++
         }
@@ -66,7 +65,6 @@ function validatePassword() {
     }
     else {
         passwordInputLogin.style.border = '2px solid green'
-        return false
     }
 }
 
