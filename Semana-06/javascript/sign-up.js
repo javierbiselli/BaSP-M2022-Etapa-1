@@ -169,7 +169,7 @@ function validateAddress() {
     }
     else if(!validation2(addressInputSignup)) {
         signupErrors[5].style.display = 'inherit';
-        signupErrors[5].textContent = '* address must contain letters and numbers and a space';
+        signupErrors[5].textContent = '* address must contain letters, numbers and a space in between';
         addressInputSignup.style.border = '2px solid red';
         return true
     }
@@ -324,7 +324,7 @@ function validation2(strings) {
         if (numbers.includes(strings.value[i])) {
             num++;
         }
-        else if(' '.includes(strings.value[i])) {
+        else if(' '.includes(strings.value.trim()[i])) {
             blankSpace++;
         }
         else {
