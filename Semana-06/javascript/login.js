@@ -4,13 +4,15 @@ var passwordInputLogin = document.querySelector('input[type="password"]');
 var loginErrors = document.getElementsByClassName('login-error');
 var submitInputLogin = document.querySelector('input[type="submit"]');
 var validationResults = document.getElementsByClassName('login-validation-result');
+var validationBox = document.getElementById('login-validation');
+
 
 // email validation
 
 emailInputLogin.addEventListener('blur', validateEmail);
 
 var emailRegex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
-var emailError = document.getElementsByClassName('login-error')[0];
+var emailError = loginErrors[0];
 
 function validateEmail() {
     if (!emailRegex.test(emailInputLogin.value)) {
@@ -31,7 +33,7 @@ emailInputLogin.addEventListener('focus', function(){
 // password validation
 
 passwordInputLogin.addEventListener('blur', validatePassword);
-passwordError = document.getElementsByClassName('login-error')[1];
+passwordError = loginErrors[1];
 
 function validation() {
     var numbers = ['1','2','3','4','5','6','7','8','9','0'];
@@ -74,8 +76,9 @@ passwordInputLogin.addEventListener('focus', function(){
 
 // login validation results
 
-validationBox = document.getElementById('login-validation');
 submitInputLogin.addEventListener('click', showResultsLogin);
+var emailValidationRes = validationResults[0]
+var passValidationRes = validationResults[1]
 
 validationBox.style.display = 'none';
 
@@ -84,20 +87,20 @@ function showResultsLogin() {
     validationBox.style.display = 'inherit';
     validationBox.scrollIntoView(true);
     if (validateEmail()) {
-        validationResults[0].textContent = 'Error: invalid email';
-        validationResults[0].style.color = 'red';
+        emailValidationRes.textContent = 'Error: invalid email';
+        emailValidationRes.style.color = 'red';
     }
     else {
-        validationResults[0].textContent = `Email: ${emailInputLogin.value}`;
-        validationResults[0].style.color = 'green';
+        emailValidationRes.textContent = `Email: ${emailInputLogin.value}`;
+        emailValidationRes.style.color = 'green';
     }
 
     if (validatePassword()) {
-        validationResults[1].textContent = 'Error: please check input requirements';
-        validationResults[1].style.color = 'red';
+        passValidationRes.textContent = 'Error: please check input requirements';
+        passValidationRes.style.color = 'red';
     }
     else {
-        validationResults[1].textContent = `Password: ${passwordInputLogin.value}`;
-        validationResults[1].style.color = 'green';
+        passValidationRes.textContent = `Password: ${passwordInputLogin.value}`;
+        passValidationRes.style.color = 'green';
     }
 }
