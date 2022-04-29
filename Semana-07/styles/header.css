@@ -1,0 +1,94 @@
+h1 {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.logo h2 {
+    margin-right: 120px;
+    font-size: 20px;
+}
+
+.menu-icon a i {
+    font-size: 40px;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    background-color: #ededed;
+}
+
+.logo-image {
+    display: none;
+    width: 120px;
+    height: 120px;
+    margin-left: 25%;
+}
+
+.logo-bar {
+    width: 240px;
+    margin: 7px auto;
+    border: 1px solid #000;
+}
+
+.logo {
+    text-align: center;
+    flex-grow: 5;
+}
+
+.menu-icon {
+    text-align: center;
+    flex-grow: 1;
+}
+
+.social-networks {
+    display: none;
+    margin-right: 1%;
+}
+
+.social-networks a i {
+    margin: 0 9px;
+    font-size: 22px;
+}
+
+.dividing-bar {
+    position: fixed;
+    display: none;
+    width: 77%;
+    margin: 0 21.7% 0;
+    border: 1px solid #000;
+    background-color: #000;
+}
+
+@media screen and (min-width: 768px) {
+    nav {
+        height: 200px;
+    }
+    
+    .logo-image {
+        display: inherit;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    nav {
+        justify-content: flex-end;
+        height: 100px;
+        background-color: #fff;
+    }
+
+    .logo-image, .logo, .menu-icon {
+        display: none;
+    }
+
+    .social-networks {
+        display: inherit;
+    }
+}   

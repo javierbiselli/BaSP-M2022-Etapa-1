@@ -1,0 +1,482 @@
+.main, .history-section, .functionalities-section, .reasons-section, .form-container, .list-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+.main img {
+    width: 100%;
+    margin: 13px 0;
+    object-fit: cover;
+}
+
+.main h2 {
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, .20);
+}
+
+.main-section h3 {
+    margin: 13px 0;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.main-section p {
+    margin-bottom: 36px;
+    font-size: 13px;
+    line-height: 1rem;
+}
+
+.main-section button, .history-section button {
+    padding: 15px 30px;
+    background-color: #AACE9B;
+    border-radius: 5px;
+    border-style: none;
+    font-size: 15px;
+    font-weight: bold;
+    color: #373867;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.history-section {
+    width: 90%;
+    text-align: start;
+    
+}
+
+.history-section h2 {
+    display: none;
+}
+
+.history-section h3 {
+    margin: 16px 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+}
+
+.history-section p {
+    text-align: start;
+    width: 95%;
+    margin-bottom: 16px;
+    font-size: 10px;
+    line-height: 1rem;
+    color: #D3D3D3;
+}
+
+.history-desktop-p {
+    display: none;
+    font-size: 15px;
+}
+
+.history-img-1-mobile, .history-img-2-mobile{
+    width: 80%;
+    max-width: 300px;
+    max-height: 150px;
+    margin-top: 20px;
+}
+
+.history-img-1 {
+    float: left;
+    width: 75%;
+    max-width: 300px;
+    max-height: 150px;
+    margin: 10px;
+    margin-bottom: 0;
+}
+
+.history-img-2 {
+    float: right;
+    width: 75%;
+    max-width: 300px;
+    max-height: 150px;
+    margin: 10px;
+    margin-bottom: 0;
+}
+
+.functionalities-section article, .reasons-section article{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around
+}
+
+.functionalities-part, .reasons-part {
+    display: flex;
+    flex-basis: 600px;
+    align-items: center;
+    text-align: start;
+    padding-bottom: 55px;
+}
+
+.functionalities-section h2, .reasons-section h2 {
+    text-align: center;
+    margin: 30px 0;
+    font-size: 25px;
+    font-weight: bold;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, .20);
+}
+
+.reasons-section h2 {
+    margin-top: 0;
+}
+
+.functionalities-part img, .reasons-part img {
+    width: 25%;
+    min-width: 80px
+}
+
+.functionalities-text h3, .reasons-text h3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.functionalities-part p, .reasons-part p {
+    font-size: 12px;
+}
+
+.functionalities-text, .reasons-text {
+    width: 70%;
+    margin-left: 20px;
+}
+
+.form-container {
+    width: 90%;
+    margin: auto;
+}
+
+.form-container h3 {
+    margin-bottom: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+}
+
+.h3-bar {
+    width: 40%;
+    margin: auto;
+    margin-bottom: 20px;
+    border: 1px solid #f11a41;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+input, select, textarea {
+    padding: 8px 10px;
+    border: 1px solid black;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: bold;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, .20);
+}
+
+input[type="text"], input[type="email"], select {
+    margin: 10px 0;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+    box-shadow: none;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.email-checkbox {
+    display: flex;
+    align-items: center;
+    align-self: flex-end;
+    font-size: 10px;
+}
+
+textarea {
+    height: 200px ;
+    margin: 10px 0;
+    resize: none;
+}
+
+.submit-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 10px;
+}
+
+input[type="submit"] {
+    width: 35%;
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: #f56a6a;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.list-section {
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: start;
+}
+
+.list h4 {
+    align-self: start;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #000;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+ol {
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+ol li {
+    margin-bottom: 25px;
+    font-size: 12px;
+}
+
+.pagination-container {
+    display: none;
+}
+
+.pagination {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.pagination a {
+    margin: 0 5px;
+    padding: 12px 15px;
+}
+
+.pagination .preview, .pagination .next {
+    padding: 10px 30px;
+    border: 2px solid #373867;
+    border-radius: 10px;
+    opacity: .50;
+    text-transform: uppercase;
+}
+
+.pagination .active {
+    border-radius: 10px;
+    background-color: #373867;
+    color: #FFF;
+}
+
+.pagination .next {
+    opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+    .main, .history-section, .functionalities-section, .reasons-section, .form-container, .list-section {
+        width: 70%;
+        margin: 30px 25%;
+    }
+
+    .main {
+        margin: 0px 25%;
+    }
+
+    .main h2 {
+        font-size: 30px;
+    }
+
+    .main h3 {
+        font-size: 24px;
+    }
+
+    .main p {
+        font-size: 18px;
+    }
+
+    .history-section h3 {
+        font-size: 30px;
+    }
+
+    .history-section p {
+        font-size: 18px;
+    }
+
+    .functionalities-section h2, .reasons-section h2 {
+        font-size: 40px;
+    }
+
+    .functionalities-section h3, .reasons-section h3 {
+        font-size: 24px;
+    }
+
+    .functionalities-section p, .reasons-section p {
+        font-size: 18px;
+    }
+
+    .form-container h3 {
+        font-size: 30px;
+    }
+
+    input, select, textarea {
+        font-size: 18px;
+    }
+
+    .submit-checkbox, .email-checkbox {
+        font-size: 16px;
+    }
+
+    input[type="submit"] {
+        font-size: 18px;
+    }
+
+    .list h4 {
+        font-size: 48px;
+    }
+
+    ol li {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .history-mobile-p, .history-button, .history-img-1-mobile, .history-img-2-mobile, .history-section h3 {
+        display: none;
+    }
+
+    .dividing-bar, .history-desktop-p, .footer-dividing-bar {
+        display: inherit;
+    }
+
+    .main, .history-section, .functionalities-section, .reasons-section, .form-container, .list-section, .pagination-container {
+        width: 76%;
+        margin: 0 20%;
+    }
+
+    .main {
+        flex-direction: row-reverse;
+        text-align: start;
+    }
+
+    .main h2 {
+        font-size: 54px;
+    }
+
+    .main img {
+        width: 50%;
+        margin-top: 56px;
+        margin-bottom: 0;
+    }
+    
+    .article-container {
+        width: 50%;
+        margin-top: 56px;
+        margin-right: 75px;
+    }
+
+    .article-container h2 {
+        font-size: 54px;
+    }
+
+    .article-container h3 {
+        margin: 52px 0 21px 0;
+        font-size: 24px;
+    }
+
+    .article-container p {
+        font-size: 18px;
+    }
+
+    .main-section button {
+        padding: 18px 85px;
+        background-color: #FFF;
+        border: 2px solid #373867;
+        border-radius: 5px;
+        font-size: 15px;
+        font-weight: bold;
+        color: #373867;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+
+    .history-section h2, .functionalities-section h2, .reasons-section h2 {
+        display: inherit;
+        margin: 50px 0;
+        font-size: 60px;
+        font-weight: bold;
+    }
+
+    .history-section h2 {
+        margin-bottom: 20px;
+    }
+
+    .history-section p {
+        font-size: 15px;
+        line-height: 1.5rem;
+        color: #373867;
+    }
+    
+    .functionalities-section h3, .reasons-section h3 {
+        font-size: 30px;
+    }
+
+    .functionalities-section p, .reasons-section p {
+        font-size: 20px;
+    }
+
+    .functionalities-part, .reasons-part {
+        flex-basis: 50%;
+    }
+
+    form {
+        width: 80%;
+        margin: auto;
+    }
+
+    .form-container h3 {
+        font-size: 60px;
+    }
+
+    input, select, textarea {
+        font-size: 22px;
+    }
+
+    .submit-checkbox, .email-checkbox {
+        font-size: 18px;
+    }
+
+    input[type="submit"] {
+        font-size: 22px;
+    }
+
+    .input-container {
+        flex-direction: row;
+    }
+
+    .input-container input {
+        width: 40%;
+    }
+
+    .list-section {
+        flex-direction: row;
+        margin-top: 60px;
+    }
+
+    ol {
+        margin-left: 20px;
+    }
+
+    .list-section h4 {
+        border: none;
+    }
+
+    .pagination-container {
+        display: inherit;
+    }
+}
