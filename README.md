@@ -35,7 +35,12 @@ In this week I included the login and signup pages, both accesible through the s
 The pages are responsive and every input in them contain validations to verify if the data provided by the user has a correct format. Also when you click or tap on the button on each page, a box appears below with the information provided by you on the inputs. If some input has an error, it will also show the error in this box.
 Validations have been made with JavaScript logic and the elements are manipulated through JavaScript DOM. Responsiveness has been achived using flexbox as the main design model and mobile first
 
-## **Click [here](https://javierbiselli.github.io/BaSP-M2022-Etapa-1/Semana-06/views) to go to the Trackgenix landing page with login and signup pages includeda.**
+## **Click [here](https://javierbiselli.github.io/BaSP-M2022-Etapa-1/Semana-06/views) to go to the Trackgenix landing page with login and signup pages included.**
+
+# Week 07 - JavaScript Async and Storage
+
+
+## **Click [here](https://javierbiselli.github.io/BaSP-M2022-Etapa-1/Semana-07/views) to go to the Trackgenix landing page with updated login and signup.**
 
 ```
 Author: Javier Biselli
