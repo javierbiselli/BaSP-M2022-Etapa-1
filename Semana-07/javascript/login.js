@@ -104,3 +104,34 @@ function showResultsLogin() {
         passValidationRes.style.color = 'green';
     }
 }
+
+// Fetch
+
+submitInputLogin.addEventListener('click', sendData);
+
+function sendData() {
+    var keys = ['email=', 'password=']
+    var values = [emailInputLogin.value, passwordInputLogin.value]
+    var concating = []
+
+    for (let i = 0; i < keys.length; i++) {
+        concating.push([keys[i].concat(values[i])])
+    }
+    concatingString = concating.join('&')
+
+    var urlConcat = 'https://basp-m2022-api-rest-server.herokuapp.com/login?'
+    urlConcat += concatingString
+
+    if (!validateEmail() & !validatePassword()) {
+        fetch(urlConcat)
+        .then(function (response) { 
+          return response.json()
+        })
+        .then(function (jsonResponse) { 
+            alert(jsonResponse.msg)
+        })
+        .catch(function (jsonResponse) { 
+            alert(jsonResponse.msg)
+        })
+    }
+}
