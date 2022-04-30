@@ -112,7 +112,7 @@ function showResultsLogin() {
     }
 }
 
-// Fetch
+// fetch
 
 submitInputLogin.addEventListener('click', sendData);
 
