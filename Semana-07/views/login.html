@@ -73,9 +73,9 @@
                     <form novalidate>
                         <h2>Log In</h2>
                         <div class="login-inputs">
-                            <input type="email" placeholder="Email">
+                            <input id="email-input" type="email" placeholder="Email">
                             <p class="login-error"></p>
-                            <input type="password" placeholder="Password">
+                            <input id="password-input" type="password" placeholder="Password">
                             <p class="login-error"></p>
                         </div>
                         <div class="dummys-login-container">
@@ -87,15 +87,17 @@
                                 <a href="#">Forgot password?</a>
                             </div>
                         </div>
-                        <input type="submit" value="Continue">
+                        <input id="submit-input" type="submit" value="Continue">
                     </form>
                 </div>
             </div>
-            <div class="login-validation-container">
-                <div id="login-validation">
+            <div id="login-validation-container" class="hidden">
+                <div id="login-validation" class="hidden">
                     <h3>Validation Result</h3>
                     <p class="login-validation-result"></p>
                     <p class="login-validation-result"></p>
+                    <p id="login-response"></p>
+                    <a id="close-modal">Close</a>
                 </div>
             </div>
         </div>
