@@ -1,10 +1,13 @@
 // Selectors
-var emailInputLogin = document.querySelector('input[type="email"]');
-var passwordInputLogin = document.querySelector('input[type="password"]');
+var emailInputLogin = document.getElementById('email-input');
+var passwordInputLogin = document.getElementById('password-input');
 var loginErrors = document.getElementsByClassName('login-error');
-var submitInputLogin = document.querySelector('input[type="submit"]');
+var submitInputLogin = document.getElementById('submit-input');
 var validationResults = document.getElementsByClassName('login-validation-result');
-var validationBox = document.getElementById('login-validation');
+var modalContainer = document.getElementById('login-validation-container');
+var modalBox = document.getElementById('login-validation')
+var LoginResponse = document.getElementById('login-response')
+var closeModal = document.getElementById('close-modal')
 
 
 // email validation
@@ -77,17 +80,21 @@ passwordInputLogin.addEventListener('focus', function(){
 // login validation results
 
 submitInputLogin.addEventListener('click', showResultsLogin);
+closeModal.addEventListener('click', function(){
+    modalContainer.classList.add('hidden')
+    modalBox.classList.add('hidden')
+})
 var emailValidationRes = validationResults[0]
 var passValidationRes = validationResults[1]
 
-validationBox.style.display = 'none';
+
 
 function showResultsLogin() {
     event.preventDefault();
-    validationBox.style.display = 'inherit';
-    validationBox.scrollIntoView(true);
+    modalContainer.classList.remove('hidden')
+    modalBox.classList.remove('hidden')
     if (validateEmail()) {
-        emailValidationRes.textContent = 'Error: invalid email';
+        emailValidationRes.textContent = 'Invalid email';
         emailValidationRes.style.color = 'red';
     }
     else {
@@ -96,7 +103,7 @@ function showResultsLogin() {
     }
 
     if (validatePassword()) {
-        passValidationRes.textContent = 'Error: please check input requirements';
+        passValidationRes.textContent = 'Invalid password';
         passValidationRes.style.color = 'red';
     }
     else {
@@ -128,10 +135,14 @@ function sendData() {
           return response.json()
         })
         .then(function (jsonResponse) { 
-            alert(jsonResponse.msg)
-        })
-        .catch(function (jsonResponse) { 
-            alert(jsonResponse.msg)
+            var jsonResponseVar = jsonResponse.msg
+            if (jsonResponse.success == true) {
+                LoginResponse.textContent = 'Success! ' + jsonResponseVar
+                closeModal.setAttribute('href', '../views/index.html')
+            }
+            else {
+                LoginResponse.textContent = 'Error! ' + jsonResponseVar
+            }
         })
     }
 }
