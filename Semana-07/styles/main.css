@@ -212,7 +212,7 @@ textarea {
     font-size: 10px;
 }
 
-input[type="submit"] {
+input[type="submit"], #close-modal {
     width: 35%;
     text-align: center;
     margin-bottom: 30px;
