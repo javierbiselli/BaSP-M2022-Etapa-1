@@ -50,26 +50,35 @@ input[type="submit"] {
     font-weight: bold;
 }
 
-.signup-validation-container {
+#signup-validation-container {
     display: flex;
     justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    margin-top: 25px;
-    margin-bottom: 40px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
 }
 
 #signup-validation {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     text-align: center;
+    position: relative;
+    top: 170px;
     width: 50%;
     max-width: 350px;
     min-width: 200px;
-    padding: 30px;
+    height: 470px;
+    padding: 15px;
     background-color: #EBEBF0;
     box-shadow: 0px 4px 15px 4px rgba(0, 0, 0, 0.25);
+}
+
+.hidden {
+    visibility: hidden;
 }
 
 #signup-validation h3 {
@@ -79,13 +88,33 @@ input[type="submit"] {
     font-size: 20px;
 }
 
-.signup-validation-result {
+.signup-validation-result, #signup-response {
     margin: 10px 0;
     font-size: 13px;
 }
 
 .signup-error {
     font-size: 13px;
+}
+
+.close-modal-container {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#close-modal {
+    margin-top: 5px;
+    padding: 5px 70px;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+
+.signup-response-container {
+    width: 100%;
+}
+
+#signup-response {
+    font-weight: bold;
 }
 
 @media screen and (min-width: 768px) {
@@ -113,8 +142,11 @@ input[type="submit"] {
     #signup-validation {
         flex-direction: row;
         flex-wrap: wrap;
-        width: 80%;
+        top: 400px;
+        width: 50%;
         max-width: 1200px;
+        height: 300px;
+        margin-left: 25%;
     }
 
     .form-inputs div {
@@ -123,6 +155,7 @@ input[type="submit"] {
 
     .signup-validation-result {
         width: 45%;
+        margin-left: 5%;
     }
 }
 
@@ -133,6 +166,10 @@ input[type="submit"] {
     
     .signup-container {
         top: 150px;
-        margin-left: 20%;
+        margin-left: 25%;
+    }
+    
+    #signup-validation {
+        top: 300px;
     }
 }

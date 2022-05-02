@@ -1,19 +1,22 @@
 // Selectors
-var nameInputSignup = document.querySelector('input[name="signup-name"]');
-var lastnameInputSignup = document.querySelector('input[name="lastname"]');
-var dniInputSignup = document.querySelector('input[name="dni"]');
-var dateInputSignup = document.querySelector('input[name="date-of-birth"]');
-var telInputSignup = document.querySelector('input[name="tel"]');
-var addressInputSignup = document.querySelector('input[name="address"]');
-var locationInputSignup = document.querySelector('input[name="location"]');
-var postalCodeInputSignup = document.querySelector('input[name="postal-code"]');
-var emailInputSignup = document.querySelector('input[name="signup-email"]');
-var passwordInputSignup = document.querySelector('input[name="password"]');
-var repeatPasswordInputSignup = document.querySelector('input[name="repeat-password"]');
+var nameInputSignup = document.getElementById('name-input-s');
+var lastnameInputSignup = document.getElementById('lastname-input-s');
+var dniInputSignup = document.getElementById('dni-input-s');
+var dateInputSignup = document.getElementById('date-input-s');
+var telInputSignup = document.getElementById('phonenumber-input-s');
+var addressInputSignup = document.getElementById('address-input-s');
+var locationInputSignup = document.getElementById('location-input-s');
+var postalCodeInputSignup = document.getElementById('postalcode-input-s');
+var emailInputSignup = document.getElementById('email-input-s');
+var passwordInputSignup = document.getElementById('password-input-s');
+var repeatPasswordInputSignup = document.getElementById('passwordrepeat-input-s');
 var signupErrors = document.getElementsByClassName('signup-error');
-var submitInputSignup = document.querySelector('input[type="submit"]');
+var submitInputSignup = document.getElementById('submit-input-s');
 var validationResultsSignup = document.getElementsByClassName('signup-validation-result');
-var validationBoxS = document.getElementById('signup-validation');
+var modalBox = document.getElementById('signup-validation');
+var modalContainer = document.getElementById('signup-validation-container');
+var signupResponse = document.getElementById('signup-response');
+var closeModal = document.getElementById('close-modal');
 
 // name validation
 
@@ -21,9 +24,9 @@ nameInputSignup.addEventListener('blur', validateName);
 var nameError = signupErrors[0];
 
 function validateName() {
-    if (nameInputSignup.value.length < 3) {
+    if (nameInputSignup.value.length < 4) {
         nameError.style.display = 'inherit';
-        nameError.textContent = '* must contain at least 3 caracters';
+        nameError.textContent = '* must contain more than 3 caracters';
         nameInputSignup.style.border = '2px solid red';
         return true
     }
@@ -53,9 +56,9 @@ lastnameInputSignup.addEventListener('blur', validateLastname);
 var lastnameError = signupErrors[1];
 
 function validateLastname() {
-    if (lastnameInputSignup.value.length < 3) {
+    if (lastnameInputSignup.value.length < 4) {
         lastnameError.style.display = 'inherit';
-        lastnameError.textContent = '* must contain at least 3 caracters';
+        lastnameError.textContent = '* must contain more than 3 caracters';
         lastnameInputSignup.style.border = '2px solid red';
         return true
     }
@@ -85,9 +88,9 @@ dniInputSignup.addEventListener('blur', validateDNI);
 var dniError = signupErrors[2];
 
 function validateDNI() {
-    if (dniInputSignup.value.length < 8) {
+    if (dniInputSignup.value.length < 7 || dniInputSignup.value.length > 8) {
         dniError.style.display = 'inherit';
-        dniError.textContent = '* must contain more than 7 numbers';
+        dniError.textContent = '* must contain 7 or 8 numbers';
         dniInputSignup.style.border = '2px solid red';
         return true
     }
@@ -364,9 +367,18 @@ function validation1(strings) {
     return false
 }
 
+function convertDate(date) {
+    var year = date.substr(0, 4);
+    var month = date.substr(5, 2);
+    var day = date.substr(8, 2);
+    var dateConv = month + '/' + day + '/' + year;
+    return dateConv
+  }
+
+  
+
 // signup validation results
 
-submitInputSignup.addEventListener('click', showResultsSignup);
 var nameValidationRes = validationResultsSignup[0];
 var lastnameValidationRes = validationResultsSignup[1];
 var dniValidationRes = validationResultsSignup[2];
@@ -379,15 +391,21 @@ var emailValidationResSignup = validationResultsSignup[8];
 var passValidationResSignup = validationResultsSignup[9];
 var passRepeatValidationRes = validationResultsSignup[10];
 
-validationBoxS.style.display = 'none';
+closeModal.addEventListener('click', function(){
+    modalContainer.classList.add('hidden');
+    modalBox.classList.add('hidden');
+})
+
+submitInputSignup.addEventListener('click', showResultsSignup);
 
 function showResultsSignup() {
     event.preventDefault();
-    validationBoxS.style.display = 'inherit';
-    validationBoxS.scrollIntoView(true);
+
+    modalContainer.classList.remove('hidden');
+    modalBox.classList.remove('hidden');
 
     if (validateName()) {
-        nameValidationRes.textContent = 'Invalid name: please check input requirements';
+        nameValidationRes.textContent = 'Invalid name';
         nameValidationRes.style.color = 'red';
     }
     else {
@@ -396,7 +414,7 @@ function showResultsSignup() {
     }
 
     if (validateLastname()) {
-        lastnameValidationRes.textContent = 'Invalid last name: please check input requirements';
+        lastnameValidationRes.textContent = 'Invalid last name';
         lastnameValidationRes.style.color = 'red';
     }
     else {
@@ -405,7 +423,7 @@ function showResultsSignup() {
     }
 
     if (validateDNI()) {
-        dniValidationRes.textContent = 'Invalid DNI: please check input requirements';
+        dniValidationRes.textContent = 'Invalid DNI';
         dniValidationRes.style.color = 'red';
     }
     else {
@@ -414,7 +432,7 @@ function showResultsSignup() {
     }
 
     if (validateDate()) {
-        birthValidationRes.textContent = 'Invalid birth date: please check input requirements';
+        birthValidationRes.textContent = 'Invalid birth date';
         birthValidationRes.style.color = 'red';
     }
     else {
@@ -423,7 +441,7 @@ function showResultsSignup() {
     }
 
     if (validateTel()) {
-        telValidationRes.textContent = 'Invalid phone number: please check input requirements';
+        telValidationRes.textContent = 'Invalid phone number';
         telValidationRes.style.color = 'red';
     }
     else {
@@ -432,7 +450,7 @@ function showResultsSignup() {
     }
 
     if (validateAddress()) {
-        addressValidationRes.textContent = 'Invalid address: please check input requirements';
+        addressValidationRes.textContent = 'Invalid address';
         addressValidationRes.style.color = 'red';
     }
     else {
@@ -441,7 +459,7 @@ function showResultsSignup() {
     }
 
     if (validateLocation()) {
-        locValidationRes.textContent = 'Invalid city: please check input requirements';
+        locValidationRes.textContent = 'Invalid city';
         locValidationRes.style.color = 'red';
     }
     else {
@@ -450,7 +468,7 @@ function showResultsSignup() {
     }
 
     if (validatePostalCode()) {
-        postValidationRes.textContent = 'Invalid postal code: please check input requirements';
+        postValidationRes.textContent = 'Invalid postal code';
         postValidationRes.style.color = 'red';
     }
     else {
@@ -468,7 +486,7 @@ function showResultsSignup() {
     }
 
     if (validatePassword()) {
-        passValidationResSignup.textContent = 'Invalid password: please check input requirements';
+        passValidationResSignup.textContent = 'Invalid password';
         passValidationResSignup.style.color = 'red';
     }
     else {
@@ -483,5 +501,50 @@ function showResultsSignup() {
     else {
         passRepeatValidationRes.textContent = `Password validation: OK`;
         passRepeatValidationRes.style.color = 'green';
+    }
+}
+
+// fetch
+
+submitInputSignup.addEventListener('click', sendData);
+
+function sendData() {
+    dateConverted = convertDate(dateInputSignup.value);
+    addressNoSpace = addressInputSignup.value.replace(' ', '%20');
+
+    var keys = ['name=', 'lastName=', 'email=', 'dni=', 'dob=', 'phone=', 'address=', 'city=', 'zip=', 'password='];
+    var values = [nameInputSignup.value, lastnameInputSignup.value, emailInputSignup.value, dniInputSignup.value, 
+        dateConverted, telInputSignup.value, addressNoSpace, locationInputSignup.value, 
+        postalCodeInputSignup.value, passwordInputSignup.value];
+    var concating = [];
+
+    for (let i = 0; i < keys.length; i++) {
+        concating.push([keys[i].concat(values[i])]);
+    }
+
+    concatingString = concating.join('&');
+
+    var urlConcat = 'https://basp-m2022-api-rest-server.herokuapp.com/signup?';
+    urlConcat += concatingString;
+
+    if (!validateName() & !validateLastname() & !validateEmail() & !validateDNI() & !validateDate() 
+        & !validateTel() & !validateAddress() & !validateLocation() & !validatePostalCode() & !validatePassword()) {
+        fetch(urlConcat)
+        .then(function (response) { 
+          return response.json()
+        })
+        .then(function (jsonResponse) { 
+            if (jsonResponse.success == true) {
+                signupResponse.textContent = 'Success! ' + jsonResponse.msg;
+                closeModal.setAttribute('href', '../views/index.html');
+            }
+            else {
+                console.log(jsonResponse);
+                signupResponse.textContent = 'Error! ' + jsonResponse.errors[0].msg;
+            }
+        })
+        .catch(function(error) {
+            console.log(error);
+        })
     }
 }
