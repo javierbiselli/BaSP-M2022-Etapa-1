@@ -519,7 +519,7 @@ function sendData() {
     var concating = [];
 
     for (let i = 0; i < keys.length; i++) {
-        concating.push([keys[i].concat(values[i])]);
+        concating.push([keys[i].concat(values[i]).trim()]);
     }
 
     concatingString = concating.join('&');
