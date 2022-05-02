@@ -5,9 +5,9 @@ var loginErrors = document.getElementsByClassName('login-error');
 var submitInputLogin = document.getElementById('submit-input');
 var validationResults = document.getElementsByClassName('login-validation-result');
 var modalContainer = document.getElementById('login-validation-container');
-var modalBox = document.getElementById('login-validation')
-var LoginResponse = document.getElementById('login-response')
-var closeModal = document.getElementById('close-modal')
+var modalBox = document.getElementById('login-validation');
+var LoginResponse = document.getElementById('login-response');
+var closeModal = document.getElementById('close-modal');
 
 
 // email validation
@@ -74,25 +74,26 @@ function validatePassword() {
 }
 
 passwordInputLogin.addEventListener('focus', function(){
-    passwordError.style.display = 'none'
+    passwordError.style.display = 'none';
 })
 
 // login validation results
 
 submitInputLogin.addEventListener('click', showResultsLogin);
 closeModal.addEventListener('click', function(){
-    modalContainer.classList.add('hidden')
-    modalBox.classList.add('hidden')
+    modalContainer.classList.add('hidden');
+    modalBox.classList.add('hidden');
 })
-var emailValidationRes = validationResults[0]
-var passValidationRes = validationResults[1]
 
-
+var emailValidationRes = validationResults[0];
+var passValidationRes = validationResults[1];
 
 function showResultsLogin() {
     event.preventDefault();
-    modalContainer.classList.remove('hidden')
-    modalBox.classList.remove('hidden')
+
+    modalContainer.classList.remove('hidden');
+    modalBox.classList.remove('hidden');
+
     if (validateEmail()) {
         emailValidationRes.textContent = 'Invalid email';
         emailValidationRes.style.color = 'red';
@@ -117,31 +118,31 @@ function showResultsLogin() {
 submitInputLogin.addEventListener('click', sendData);
 
 function sendData() {
-    var keys = ['email=', 'password=']
-    var values = [emailInputLogin.value, passwordInputLogin.value]
-    var concating = []
+    var keys = ['email=', 'password='];
+    var values = [emailInputLogin.value, passwordInputLogin.value];
+    var concating = [];
 
     for (let i = 0; i < keys.length; i++) {
-        concating.push([keys[i].concat(values[i])])
+        concating.push([keys[i].concat(values[i])]);
     }
-    concatingString = concating.join('&')
+    concatingString = concating.join('&');
 
-    var urlConcat = 'https://basp-m2022-api-rest-server.herokuapp.com/login?'
-    urlConcat += concatingString
+    var urlConcat = 'https://basp-m2022-api-rest-server.herokuapp.com/login?';
+    urlConcat += concatingString;
 
     if (!validateEmail() & !validatePassword()) {
         fetch(urlConcat)
         .then(function (response) { 
-          return response.json()
+          return response.json();
         })
         .then(function (jsonResponse) { 
-            var jsonResponseVar = jsonResponse.msg
+            var jsonResponseVar = jsonResponse.msg;
             if (jsonResponse.success == true) {
-                LoginResponse.textContent = 'Success! ' + jsonResponseVar
-                closeModal.setAttribute('href', '../views/index.html')
+                LoginResponse.textContent = 'Success! ' + jsonResponseVar;
+                closeModal.setAttribute('href', '../views/index.html');
             }
             else {
-                LoginResponse.textContent = 'Error! ' + jsonResponseVar
+                LoginResponse.textContent = 'Error! ' + jsonResponseVar;
             }
         })
     }
