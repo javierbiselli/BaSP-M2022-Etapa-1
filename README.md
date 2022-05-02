@@ -39,6 +39,10 @@ Validations have been made with JavaScript logic and the elements are manipulate
 
 # Week 07 - JavaScript Async and Storage
 
+In this week, I included function to the buttons in login and signup pages. When these buttons are clicked or tapped, the data written on the inputs is sent to a server, then the server returns a message of success, or a message of error.
+In the login page, the message of success appears only when entering an existing user (in this case: rose@radiumrocket.com and BaSP2022), if you try any other user that does not exist, an error message sent by the server will appear.
+In the signup page, the message of success will appear only when you correctly fill the inputs needed, if an error that the frontend did not detect is found, the server will send a message with the specific data that needs to be corrected
+The data in both pages is sent to the server only if the frontend validations are OK
 
 ## **Click [here](https://javierbiselli.github.io/BaSP-M2022-Etapa-1/Semana-07/views) to go to the Trackgenix landing page with updated login and signup.**
 
