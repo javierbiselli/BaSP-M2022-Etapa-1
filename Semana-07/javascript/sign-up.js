@@ -373,8 +373,34 @@ function convertDate(date) {
     var day = date.substr(8, 2);
     var dateConv = month + '/' + day + '/' + year;
     return dateConv
-  }
+}
 
+function convertDatetoNormal(date) {
+    var year = date.substr(0, 4);
+    var month = date.substr(5, 2);
+    var day = date.substr(8, 2);
+    var dateConv =  day + '/' + month + '/' + year;
+    return dateConv
+}
+
+
+// localStorage
+
+function saveLocalStorage(data) {
+    if(localStorage.getItem('id') == null) {
+    localStorage.setItem("id", data.id);
+    localStorage.setItem('name', data.name);
+    localStorage.setItem('lastname', data.lastName);
+    localStorage.setItem('dni', data.dni);
+    localStorage.setItem('birth date', data.dob);
+    localStorage.setItem('phone', data.phone);
+    localStorage.setItem('address', data.address);
+    localStorage.setItem('location', data.city);
+    localStorage.setItem('postalcode', data.zip);
+    localStorage.setItem('email', data.email);
+    localStorage.setItem('password', data.password);
+    }
+}
   
 
 // signup validation results
@@ -528,7 +554,7 @@ function sendData() {
     urlConcat += concatingString;
 
     if (!validateName() & !validateLastname() & !validateEmail() & !validateDNI() & !validateDate() 
-        & !validateTel() & !validateAddress() & !validateLocation() & !validatePostalCode() & !validatePassword()) {
+        & !validateTel() & !validateAddress() & !validateLocation() & !validatePostalCode() & !validatePassword() & !matchPassword()) {
         fetch(urlConcat)
         .then(function (response) { 
           return response.json()
@@ -537,6 +563,8 @@ function sendData() {
             if (jsonResponse.success == true) {
                 signupResponse.textContent = 'Success! ' + jsonResponse.msg;
                 closeModal.setAttribute('href', '../views/index.html');
+                var data = jsonResponse.data;
+                saveLocalStorage(data);
             }
             else {
                 console.log(jsonResponse);
@@ -547,4 +575,19 @@ function sendData() {
             console.log(error);
         })
     }
+}
+
+// localstorage get
+
+if (localStorage.getItem('id') != null) {
+    nameInputSignup.value = localStorage.getItem('name');
+    lastnameInputSignup.value = localStorage.getItem('lastname');
+    dniInputSignup.value = localStorage.getItem('dni');
+    dateInputSignup.value = localStorage.getItem('birthdate');
+    telInputSignup.value = localStorage.getItem('phone');
+    addressInputSignup.value = localStorage.getItem('address');
+    locationInputSignup.value = localStorage.getItem('location');
+    postalCodeInputSignup.value = localStorage.getItem('postalcode');
+    emailInputSignup.value = localStorage.getItem('email');
+    passwordInputSignup.value = localStorage.getItem('password');
 }

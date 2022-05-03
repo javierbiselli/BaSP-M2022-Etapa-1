@@ -140,6 +140,8 @@ function sendData() {
             if (jsonResponse.success == true) {
                 LoginResponse.textContent = 'Success! ' + jsonResponseVar;
                 closeModal.setAttribute('href', '../views/index.html');
+                localStorage.setItem('emailLogin', emailInputLogin.value);
+                localStorage.setItem('passwordLogin', passwordInputLogin.value);
             }
             else {
                 LoginResponse.textContent = 'Error! ' + jsonResponseVar;
@@ -147,3 +149,8 @@ function sendData() {
         })
     }
 }
+
+// localstorage get
+
+emailInputLogin.value = localStorage.getItem('emailLogin');
+passwordInputLogin.value = localStorage.getItem('passwordLogin');
